@@ -1,5 +1,5 @@
 ﻿/*
-https://contest.yandex.ru/contest/22781/run-report/111336521/
+https://contest.yandex.ru/contest/22781/run-report/111406829/
 */
 /*
 
@@ -40,6 +40,10 @@ using System.Xml.Schema;
 
 public class Final1
 {
+    private const string ErrorOutputMessage = "error";
+    private const string ExceptionIncorrectFormatMessage = "Incorrect format input data";
+    private const string ExceptionUnknownCommandMessage = "Unknown command";
+
     private static TextReader reader;
     private static TextWriter writer;
 
@@ -106,10 +110,10 @@ public class Final1
                 if (Int32.TryParse(commandList[1], out var num))
                 {
                     if(!_operationDeque.PushBack(num))  
-                        writer.WriteLine("error");
+                        writer.WriteLine(ErrorOutputMessage);
                 }
                 else
-                    throw new Exception("Incorrect format input data");
+                    throw new Exception(ExceptionIncorrectFormatMessage);
             }
                 break;
             case "push_front":
@@ -117,10 +121,10 @@ public class Final1
                 if (Int32.TryParse(commandList[1], out var num))
                 {
                     if(!_operationDeque.PushFront(num))
-                        writer.WriteLine("error");
+                        writer.WriteLine(ErrorOutputMessage);
                 }
                 else
-                    throw new Exception("Incorrect format input data");
+                    throw new Exception(ExceptionIncorrectFormatMessage);
             }
                 break;
             case "pop_front":
@@ -129,7 +133,7 @@ public class Final1
                 if (num.HasValue)
                     writer.WriteLine(num);
                 else
-                    writer.WriteLine("error");
+                    writer.WriteLine(ErrorOutputMessage);
             }
                 break;
             case "pop_back":
@@ -138,11 +142,11 @@ public class Final1
                 if (num.HasValue)
                     writer.WriteLine(num);
                 else
-                    writer.WriteLine("error");
+                    writer.WriteLine(ErrorOutputMessage);
             }
                 break;
             default:
-                throw new Exception("Unknown command");
+                throw new Exception(ExceptionUnknownCommandMessage);
         }
 
     }
@@ -179,7 +183,7 @@ public class Deque
     /// <returns>true - корректное выполнение, false - объем данных достиг максимального размер, добавление невозможно </returns>
     public bool PushBack(int num)
     {
-        if (_size == _maxSize)
+        if (IsFull())
             return false;
 
         _deque[_tail] = num;
@@ -195,7 +199,7 @@ public class Deque
     /// <returns>true - корректное выполнение, false - объем данных достиг максимального размер, добавление невозможно </returns>
     public bool PushFront(int num)
     {
-        if (_size == _maxSize)
+        if (IsFull())
             return false;
 
 
@@ -266,5 +270,14 @@ public class Deque
     public bool IsEmpty()
     {
         return _size == 0;
+    }
+
+    /// <summary>
+    /// проверка на возможность добавления в стек
+    /// </summary>
+    /// <returns></returns>
+    public bool IsFull()
+    {
+        return _size == _maxSize;
     }
 }

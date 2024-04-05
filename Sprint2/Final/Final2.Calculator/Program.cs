@@ -1,5 +1,5 @@
-﻿/*
- https://contest.yandex.ru/contest/22781/run-report/111324533/
+﻿/* 
+    https://contest.yandex.ru/contest/22781/run-report/111407828/
 */
 
 /*
@@ -148,5 +148,37 @@ public class Final2
     {
         return reader.ReadLine()
             .Split(new[] { ' ', '\t', }, StringSplitOptions.RemoveEmptyEntries).ToList();
+    }
+}
+
+public class Stack<TValue>
+{
+    private List<TValue> _items;
+
+    public Stack()
+    {
+        _items = new List<TValue>();
+    }
+
+    public void Push(TValue item)
+    {
+        _items.Add(item);
+    }
+
+    public TValue Pop()
+    {
+        TValue lastItem = _items[_items.Count - 1];
+        _items.RemoveAt(_items.Count - 1);
+        return lastItem;
+    }
+
+    public TValue Peek
+    {
+        get {return _items[_items.Count - 1]; }
+    }
+
+    public int Count
+    {
+        get { return _items.Count; }
     }
 }
