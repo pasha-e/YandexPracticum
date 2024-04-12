@@ -47,6 +47,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L.TwoBicycles", "Sprint3\L.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B.Combinations", "Sprint3\B.Combinations\B.Combinations.csproj", "{17221C21-C6E3-4BBE-BBE9-425125F941AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A.BracketGenerator", "Sprint3\A.BracketGenerator\A.BracketGenerator.csproj", "{35FBC693-E8CB-456E-A2C6-C33AB0E21B51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -121,6 +123,10 @@ Global
 		{17221C21-C6E3-4BBE-BBE9-425125F941AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17221C21-C6E3-4BBE-BBE9-425125F941AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17221C21-C6E3-4BBE-BBE9-425125F941AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35FBC693-E8CB-456E-A2C6-C33AB0E21B51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35FBC693-E8CB-456E-A2C6-C33AB0E21B51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35FBC693-E8CB-456E-A2C6-C33AB0E21B51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35FBC693-E8CB-456E-A2C6-C33AB0E21B51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -145,6 +151,7 @@ Global
 		{44A1E8B9-D0AD-4597-B911-DE4270E81B6A} = {DD1AB9B7-B98B-476D-803F-637D5D2FDD26}
 		{149B5F5D-D608-474B-804C-823FB32A5B6E} = {70F89341-37F4-4301-9FC6-752E272E675D}
 		{17221C21-C6E3-4BBE-BBE9-425125F941AA} = {70F89341-37F4-4301-9FC6-752E272E675D}
+		{35FBC693-E8CB-456E-A2C6-C33AB0E21B51} = {70F89341-37F4-4301-9FC6-752E272E675D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2836D203-ED61-4435-BE14-A0F4EAC964D7}

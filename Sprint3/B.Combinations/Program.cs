@@ -27,6 +27,8 @@ public class B
         //writer.WriteLine(res);
 
         Combine2(inputKeys, String.Empty);
+
+        //var res = Combine3(inputKeys, String.Empty, new List<string>());
     }
 
     private static void Combine2(string input, string prefix)
@@ -47,6 +49,32 @@ public class B
             }
         }
 
+    }
+
+    private static  List<string> Combine3(string input, string path, List<string> list)
+    {
+        List<string> result = null;
+
+        if (String.IsNullOrEmpty(input))
+        {
+
+            if(!String.IsNullOrEmpty(path))
+                list.Add(path);
+
+            return list;
+        }
+
+        foreach (var key in _phoneKeysMap[input[0]])
+        {
+            path += key;
+
+            result = Combine3(input.Substring(1), path, list);
+
+            path = path.Substring(0, path.Length - 1);
+        }
+
+
+        return result;
     }
 
 
