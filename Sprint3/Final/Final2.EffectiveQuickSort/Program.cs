@@ -165,15 +165,19 @@ public class Final2QuickSort
 
 public class UserInfo : IComparable<UserInfo>
 {
-    public string UserName { get; set; }
-    public int Solved { get; set; }
-    public int Penalty { get; set; }
+    public readonly string _userName;
+    public readonly int _solved;
+    public readonly int _penalty;
+
+    public string UserName => _userName;
+    public int Solved => _solved;
+    public int Penalty => _penalty;
 
     public UserInfo(string userName, int solved, int penalty)
     {
-        UserName = userName;
-        Solved = solved;
-        Penalty = penalty;
+        _userName = userName;
+        _solved = solved;
+        _penalty = penalty;
     }
 
     public override string ToString()
