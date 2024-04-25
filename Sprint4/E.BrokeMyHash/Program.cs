@@ -3,14 +3,12 @@ using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection.PortableExecutable;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-public class L
+public class E
 {
-    private static TextReader reader;
-    private static TextWriter writer;
-
     private static  int baseA = 1000;
 
     private static int M = 123987123;
@@ -18,42 +16,65 @@ public class L
 
     public static void Main(string[] args)
     {
-        reader = new StreamReader(Console.OpenStandardInput());
-        writer = new StreamWriter(Console.OpenStandardOutput());
+        //Console.WriteLine( GetHash("ezhgeljkablzwnvuwqvp", baseA, M)); //47021983
 
-        /*writer.WriteLine( GeneratedString(20) );
-        writer.WriteLine(GeneratedString(20));
-        writer.WriteLine(GeneratedString(20));
-        writer.WriteLine(GeneratedString(20));
-        writer.WriteLine(GeneratedString(20));*/
+        //Console.WriteLine(GetHash("gbpdcvkumyfxillgnqrv", baseA, M)); //47021983
 
-        writer.WriteLine( GetHash("ezhgeljkablzwnvuwqvp", baseA, M));
+        FindPair();
 
-        writer.WriteLine(GetHash("gbpdcvkumyfxillgnqrv", baseA, M));
+        string sampleStr = GeneratedString(20);
 
-        writer.WriteLine(-13 % 5);
-        writer.WriteLine(Math.IEEERemainder((double)-13, (double)5));
-
-        writer.WriteLine(13 % 5);
-        writer.WriteLine(Math.IEEERemainder((double)13, (double)5));
-
-        writer.WriteLine(13 / 5);
-        writer.WriteLine(-13 / 5);
-
-
-        writer.WriteLine(Math.Floor( (double)-13/5));
-
-        writer.WriteLine(Modulus(-13, 5));
-        writer.WriteLine(Modulus(13, 5));
-        writer.WriteLine(Modulus(118, 5));
-
-        reader.Close();
-        writer.Close();
+        FindPairForSample(sampleStr);
     }
 
-    private static int Modulus(int a, int b)
+    private static void FindPair()
     {
-        int c = (int)Math.Floor((double)a / b);
+        Dictionary<long, string> map = new Dictionary<long, string>();
+
+        while (true)
+        {
+            var rndStr = GeneratedString(20);
+
+            var hash = GetHash(rndStr, baseA, M);
+
+            if (!map.ContainsKey(hash))
+                map[hash] = rndStr;
+            else
+            {
+                Console.WriteLine($"{rndStr} {hash}");
+
+                Console.WriteLine($"{map[hash]} {hash}");
+
+                break;
+            }
+        }
+    }
+
+    private static void FindPairForSample(string sampleStr)
+    {
+        var sampleHash = GetHash(sampleStr, baseA, M);
+
+        Console.WriteLine($"{sampleStr} {sampleHash}");
+
+        while (true)
+        {
+            var rndStr = GeneratedString(20);
+
+            var hash = GetHash(rndStr, baseA, M);
+
+            //код чтобы найти пару к заданнйо строке
+            if (hash == sampleHash)
+            {
+                Console.WriteLine($"{rndStr} {hash}");
+
+                break;
+            }
+        }
+    }
+
+    private static long Modulus(long a, long b)
+    {
+        long c = (long)Math.Floor((double)a / b);
 
         return a -  c * b ;
     }
@@ -73,38 +94,36 @@ public class L
         return result; 
     }
 
-    private static int GetHash(string sourceStr, int p, int m)
+    private static long GetHash(string sourceStr, int p, int m)
     {
-        int hash = 0;
+        long hash = 0;
 
-        int powerP = 1;
-        /*
-        foreach (var symb in sourceStr)
+        long powerP = 1;
+        
+        foreach (var symb in sourceStr.Reverse())
         {
-            //hash =  ( hash +  (int)symb * powerP) % m;
-
-            //hash = (int) Math.IEEERemainder((hash + (int)symb * powerP) ,  m);
-
-            //hash = Modulus((hash + (int)symb * powerP), m);
-            hash = (hash + (int)symb * powerP);
-
-
-            powerP = (powerP * p);
-            //powerP = (int) Math.IEEERemainder((powerP * p) , m);
-            //powerP = Modulus((powerP * p), m);
+            hash = Modulus((hash + (int)symb * powerP), m);
+         
+            powerP = Modulus((powerP * p), m);
         }
-        */
-        for (int i = sourceStr.Length - 1; i >= 0; i--)
-        {
-            char symb = sourceStr[i];
-
-            hash = hash + symb  * powerP;
-
-            powerP = p * powerP;
-        }
-
-        hash = Modulus(hash, m);
-
+        
         return hash;
     }
 }
+
+/*
+otxncefvcinkqouoptjr 21478529
+ycmytcuimktyonqpomcx 21478529
+   
+ywsslnqhptxfqelevytp 43855951
+eocggxrpiovrevyacbpb 43855951
+
+kxwtgmokbphljmbsngtt - 93034647
+ujwnrnskmatwsuyozzcq - 93034647
+
+wxureghmwmdcqhrdbaja 103172680
+ojeffxulmnitxkmnnwwi 103172680
+
+habuyqscebynidcyupdv 56129649
+yapxhulmppuytyhngmvt 56129649
+ */
