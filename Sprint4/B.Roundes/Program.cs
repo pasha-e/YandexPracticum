@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-public class L
+public class B
 {
     private static TextReader reader;
     private static TextWriter writer;
