@@ -77,9 +77,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sprint1FinalNearZero", "Spr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E.BrokeMyHash", "Sprint4\E.BrokeMyHash\E.BrokeMyHash.csproj", "{2EFA7308-D9F3-4175-94D8-7B8927C68DBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C.StrangeCompare", "Sprint4\C.StrangeCompare\C.StrangeCompare.csproj", "{0363F5C6-48F2-4D53-8B3E-0147B9F889E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C.StrangeCompare", "Sprint4\C.StrangeCompare\C.StrangeCompare.csproj", "{0363F5C6-48F2-4D53-8B3E-0147B9F889E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D.PolynomicHash", "Sprint4\D.PolynomicHash\D.PolynomicHash.csproj", "{B81556B3-F9F1-4588-89CE-90091CA3BDB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D.PolynomicHash", "Sprint4\D.PolynomicHash\D.PolynomicHash.csproj", "{B81556B3-F9F1-4588-89CE-90091CA3BDB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G.FourSumm", "Sprint4\G.FourSumm\G.FourSumm.csproj", "{9A71D267-7BFA-414D-9262-3FF662764299}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -215,6 +217,10 @@ Global
 		{B81556B3-F9F1-4588-89CE-90091CA3BDB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B81556B3-F9F1-4588-89CE-90091CA3BDB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B81556B3-F9F1-4588-89CE-90091CA3BDB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A71D267-7BFA-414D-9262-3FF662764299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A71D267-7BFA-414D-9262-3FF662764299}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A71D267-7BFA-414D-9262-3FF662764299}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A71D267-7BFA-414D-9262-3FF662764299}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -255,6 +261,7 @@ Global
 		{2EFA7308-D9F3-4175-94D8-7B8927C68DBC} = {0415D062-878F-45E6-A3A8-21D43F8A5585}
 		{0363F5C6-48F2-4D53-8B3E-0147B9F889E5} = {0415D062-878F-45E6-A3A8-21D43F8A5585}
 		{B81556B3-F9F1-4588-89CE-90091CA3BDB1} = {0415D062-878F-45E6-A3A8-21D43F8A5585}
+		{9A71D267-7BFA-414D-9262-3FF662764299} = {0415D062-878F-45E6-A3A8-21D43F8A5585}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2836D203-ED61-4435-BE14-A0F4EAC964D7}
