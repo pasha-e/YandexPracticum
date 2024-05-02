@@ -9,6 +9,7 @@ public class G
     private static TextWriter writer;
 
 
+    //этот вариант ен проходит по TL, что и логично
     private static SortedSet<Tuple<int, int, int, int>> FourSumm(int[] arr, int summ)
     {
         var history = new HashSet<int>();
@@ -21,10 +22,10 @@ public class G
             {
                 for (int z = j + 1; z < arr.Length; z++)
                 {
-                    int target = summ - arr[i] - arr[j] - arr[z];
-                    if (history.Contains(target))
+                    long target = (long)summ - arr[i] - arr[j] - arr[z];
+                    if (history.Contains((int)target))
                     {
-                        fours.Add(Tuple.Create(target, arr[i], arr[j], arr[z]));
+                        fours.Add(Tuple.Create((int)target, arr[i], arr[j], arr[z]));
                     }
                 }
             }
@@ -39,18 +40,19 @@ public class G
     {
         Array.Sort(arr);
 
-        var twoSumms = new Dictionary<int, List<(int, int)>>();
+        var twoSumms = new Dictionary<long, List<(int, int)>>();
         //закешируем все суммы двоек
         for (int i = 0; i < arr.Length; i++)
         {
             for (int j = i + 1; j < arr.Length; j++)
             {
-                var target = arr[i] + arr[j];
+                //long для выстраданого примера из тестов
+                long target = arr[i] + arr[j];
 
-                if(!twoSumms.ContainsKey(target))
+                if (!twoSumms.ContainsKey(target))
                     twoSumms[target] = new List<(int, int)>();
 
-                twoSumms[target].Add( (i, j) );
+                twoSumms[target].Add((i, j));
             }
         }
 
@@ -58,15 +60,15 @@ public class G
 
         for (int i = 0; i < arr.Length; i++)
         {
-            if(i > 0 && arr[i] == arr[i-1])
+            if (i > 0 && arr[i] == arr[i - 1])
                 continue;
 
             for (int j = i + 1; j < arr.Length; j++)
             {
-                if (j > i +1 && arr[j] == arr[j - 1])
+                if (j > i + 1 && arr[j] == arr[j - 1])
                     continue;
 
-                var target = arr[i] + arr[j];
+                long target = (long)arr[i] + arr[j];
 
                 if (!twoSumms.ContainsKey(summ - target))
                     continue;
@@ -74,7 +76,7 @@ public class G
 
                 foreach (var indexesTuple in twoSumms[summ - target])
                 {
-                    if(indexesTuple.Item1 <= j)
+                    if (indexesTuple.Item1 <= j)
                         continue;
 
                     var fourGroup = Tuple.Create(arr[i], arr[j], arr[indexesTuple.Item1], arr[indexesTuple.Item2]);
@@ -83,15 +85,47 @@ public class G
                 }
             }
         }
-
-        
         return fours;
+    }
+
+    private static IList<IList<int>> ThreeSum(int[] nums)
+    {
+        var A = 0;
+
+        var history = new HashSet<int>();
+        Array.Sort(nums);
+
+        var triples = new HashSet<Tuple<int, int, int>>();
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            for (int j = i + 1; j < nums.Length; j++)
+            {
+                int target = A - nums[i] - nums[j];
+                if (history.Contains(target))
+                {
+                    triples.Add(Tuple.Create( target, nums[i], nums[j] ));
+                }
+            }
+            history.Add(nums[i]);
+        }
+
+        var res = new List<IList<int>>();
+
+        foreach (var item in triples)
+        {
+            res.Add(new List<int>(){item.Item1, item.Item2, item.Item3});
+        }
+
+        return res;
     }
 
     public static void Main(string[] args)
     {
         reader = new StreamReader(Console.OpenStandardInput());
         writer = new StreamWriter(Console.OpenStandardOutput());
+
+        ThreeSum(new int[] { 0, 0, 0, 0 });
 
         var n = ReadInt();
 
