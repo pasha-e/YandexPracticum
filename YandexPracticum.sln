@@ -87,6 +87,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Final", "Final", "{E614DEFB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final1.SearchSystem", "Sprint4\Final\Final1.SearchSystem\Final1.SearchSystem.csproj", "{A134D4F1-A6C6-4865-8ADA-8FAA3AD89FF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final2.HashTable", "Sprint4\Final\Final2.HashTable\Final2.HashTable.csproj", "{2B1BFDBE-6010-46D1-A426-350F41544BBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -229,6 +231,10 @@ Global
 		{A134D4F1-A6C6-4865-8ADA-8FAA3AD89FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A134D4F1-A6C6-4865-8ADA-8FAA3AD89FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A134D4F1-A6C6-4865-8ADA-8FAA3AD89FF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B1BFDBE-6010-46D1-A426-350F41544BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B1BFDBE-6010-46D1-A426-350F41544BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B1BFDBE-6010-46D1-A426-350F41544BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B1BFDBE-6010-46D1-A426-350F41544BBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -272,6 +278,7 @@ Global
 		{9A71D267-7BFA-414D-9262-3FF662764299} = {0415D062-878F-45E6-A3A8-21D43F8A5585}
 		{E614DEFB-B9F0-40DA-A4C0-1394A217B1B6} = {0415D062-878F-45E6-A3A8-21D43F8A5585}
 		{A134D4F1-A6C6-4865-8ADA-8FAA3AD89FF3} = {E614DEFB-B9F0-40DA-A4C0-1394A217B1B6}
+		{2B1BFDBE-6010-46D1-A426-350F41544BBE} = {E614DEFB-B9F0-40DA-A4C0-1394A217B1B6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2836D203-ED61-4435-BE14-A0F4EAC964D7}
