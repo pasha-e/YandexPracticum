@@ -591,6 +591,51 @@ mary likes black coffee without milk<br>
   </tr>
 </tbody></table>
 
+<table><tbody>
+  <tr>
+    <td><b>Ввод</b></td>
+    <td><b>Вывод</b></td>
+  </tr>
+  <tr>
+    <td valign="top">
+6<br>
+buy flat in moscow<br>
+rent flat in moscow<br>
+sell flat in moscow<br>
+want flat in moscow like crazy<br>
+clean flat in moscow on weekends<br>
+renovate flat in moscow<br>
+1<br>
+flat in moscow for crazy weekends<br>
+
+</td>
+    <td valign="top">
+4 5 1 2 3<br>
+</td>
+  </tr>
+</tbody></table>
+
+<table><tbody>
+  <tr>
+    <td><b>Ввод</b></td>
+    <td><b>Вывод</b></td>
+  </tr>
+  <tr>
+    <td valign="top">
+3<br>
+i like dfs and bfs<br>
+i like dfs dfs<br>
+i like bfs with bfs and bfs<br>
+1<br>
+dfs dfs dfs dfs bfs<br>
+
+</td>
+    <td valign="top">
+3 1 2<br>
+</td>
+  </tr>
+</tbody></table>
+
 </details>
 
 ---
