@@ -1,5 +1,5 @@
 ﻿/*
- https://contest.yandex.ru/contest/24414/run-report/113443342/
+https://contest.yandex.ru/contest/24414/run-report/113510079/
  */
 /*
  -- ПРИНЦИП РАБОТЫ --
@@ -28,7 +28,7 @@
     В максимально плохом случае с постоянными колизиями, когда все данные находятся в одном диапазоне и хэши будут совпадать,
     поиск может свестись к линейному O(n)
 
-    В среднем O(n),  в вырожденном плохом O(n)
+    В среднем O(1),  в вырожденном плохом O(n)
        
    -- ПРОСТРАНСТВЕННАЯ СЛОЖНОСТЬ --
    
@@ -200,6 +200,7 @@ public class HashTable
 
 public class Final2HashTable
 {
+    private const string NoneStr = "None";
     
     private static TextReader reader;
     private static TextWriter writer;
@@ -243,7 +244,7 @@ public class Final2HashTable
             case "get":
             {
                 var val = _hashTable.Get(Convert.ToInt32(command[1]));
-                result = val.HasValue ? $"{val}" : "None";
+                result = val.HasValue ? $"{val}" : NoneStr;
                 break;
             }
             case "put":
@@ -252,7 +253,7 @@ public class Final2HashTable
             case "delete":
             {
                 var val = _hashTable.Delete(Convert.ToInt32(command[1]));
-                result = val.HasValue ? $"{val}" : "None";
+                result = val.HasValue ? $"{val}" : NoneStr;
                 break;
             }
             default:

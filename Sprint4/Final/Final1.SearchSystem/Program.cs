@@ -1,5 +1,5 @@
 ﻿/*
- https://contest.yandex.ru/contest/24414/run-report/113401454/
+https://contest.yandex.ru/contest/24414/run-report/113511704/
  */
 /*
     -- ПРИНЦИП РАБОТЫ --
@@ -67,7 +67,7 @@ public class Final1SearchSystem
         
         var n = ReadInt();
 
-        List<List<string>> inputData = new List<List<string>>();
+        var inputData = new List<List<string>>();
 
         for (int i = 0; i < n; i++)
         {
@@ -76,17 +76,10 @@ public class Final1SearchSystem
         
         var m = ReadInt();
 
-        List<HashSet<string>> requestsData = new List<HashSet<string>>();
-        //List<List<string>> requestsData = new List<List<string>>();
-
+        var requestsData = new List<HashSet<string>>();
+        
         for (int i = 0; i < m; i++)
         {
-            /*
-             var strList = ReadStrList();
-            strList = strList.Distinct().ToList();
-
-            requestsData.Add(strList);
-            */
             requestsData.Add(ReadHashSet());
         }
         
@@ -109,13 +102,13 @@ public class Final1SearchSystem
     private static Dictionary<string, Dictionary<int, int>> CreateSearchIndex(List<List<string>> documents)
     {
         //word : (document : weight)
-        Dictionary<string, Dictionary<int, int>> searchIndexDictionary = new Dictionary<string, Dictionary<int, int>>();
+        Dictionary<string, Dictionary<int, int>> searchIndexDictionary = new();
 
         //по всем документам
         for (int i = 0; i < documents.Count; i++)
         {
             //переложим список в словарь word : weight
-            Dictionary<string, int> dict = new Dictionary<string, int>();
+            Dictionary<string, int> dict = new();
             foreach (var word in documents[i])
             {
                 if (!dict.ContainsKey(word))
@@ -164,7 +157,7 @@ public class Final1SearchSystem
         res.Sort(CompareByWeight);
 
         //подготовка вывода (проверрка на лимит и !0)
-        List<int> resultIndexes = new List<int>();
+        var resultIndexes = new List<int>();
 
         for (int i = 0; i < res.Count; i++)
         {
