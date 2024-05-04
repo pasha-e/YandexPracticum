@@ -167,6 +167,10 @@ public class HashTable
         while (_slots[positionHash].HasValue && _slots[positionHash] != key)
         {
             positionHash = Rehash(positionHash);
+
+            //TODO это на обдумать на потом
+            //if(positionHash >= _size)  
+            //    positionHash = 0 ;
         }
 
         return positionHash;
