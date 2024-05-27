@@ -105,6 +105,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Final", "Final", "{24241B61
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final2.RemoveNode", "Sprint5\Final\Final2.RemoveNode\Final2.RemoveNode.csproj", "{A24E9A35-57A4-40A5-BDA1-09384B6AC08F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B.BalancedTree", "Sprint5\B.BalancedTree\B.BalancedTree.csproj", "{A693C914-375E-4EA2-9282-72482738F17D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -275,6 +277,10 @@ Global
 		{A24E9A35-57A4-40A5-BDA1-09384B6AC08F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A24E9A35-57A4-40A5-BDA1-09384B6AC08F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A24E9A35-57A4-40A5-BDA1-09384B6AC08F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A693C914-375E-4EA2-9282-72482738F17D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A693C914-375E-4EA2-9282-72482738F17D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A693C914-375E-4EA2-9282-72482738F17D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A693C914-375E-4EA2-9282-72482738F17D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -326,6 +332,7 @@ Global
 		{02AB30BE-BD9D-4CAC-9208-1510DB65A156} = {51657F7A-A591-429C-98BE-23AA67356653}
 		{24241B61-E87D-4023-A10A-71612A401177} = {51657F7A-A591-429C-98BE-23AA67356653}
 		{A24E9A35-57A4-40A5-BDA1-09384B6AC08F} = {24241B61-E87D-4023-A10A-71612A401177}
+		{A693C914-375E-4EA2-9282-72482738F17D} = {51657F7A-A591-429C-98BE-23AA67356653}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2836D203-ED61-4435-BE14-A0F4EAC964D7}
