@@ -111,6 +111,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L.SiftDown", "Sprint5\L.Sif
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M.SiftUp", "Sprint5\M.SiftUp\M.SiftUp.csproj", "{98A7E817-94AA-4DE7-B8F0-3538B16214C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Final1.HeapSort", "Sprint5\Final\Final1.HeapSort\Final1.HeapSort.csproj", "{AD0E877D-101A-4B8C-8B54-1EB8234C3E38}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -293,6 +295,10 @@ Global
 		{98A7E817-94AA-4DE7-B8F0-3538B16214C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98A7E817-94AA-4DE7-B8F0-3538B16214C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98A7E817-94AA-4DE7-B8F0-3538B16214C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD0E877D-101A-4B8C-8B54-1EB8234C3E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD0E877D-101A-4B8C-8B54-1EB8234C3E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD0E877D-101A-4B8C-8B54-1EB8234C3E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD0E877D-101A-4B8C-8B54-1EB8234C3E38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -347,6 +353,7 @@ Global
 		{A693C914-375E-4EA2-9282-72482738F17D} = {51657F7A-A591-429C-98BE-23AA67356653}
 		{ABFC077F-1269-44A3-81D2-1889C6422B68} = {51657F7A-A591-429C-98BE-23AA67356653}
 		{98A7E817-94AA-4DE7-B8F0-3538B16214C9} = {51657F7A-A591-429C-98BE-23AA67356653}
+		{AD0E877D-101A-4B8C-8B54-1EB8234C3E38} = {24241B61-E87D-4023-A10A-71612A401177}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2836D203-ED61-4435-BE14-A0F4EAC964D7}
