@@ -1,5 +1,5 @@
 ﻿/*  
-https://contest.yandex.ru/contest/24810/run-report/114654282/
+https://contest.yandex.ru/contest/24810/run-report/114727331/
  */
 /*
  -- ПРИНЦИП РАБОТЫ --
@@ -54,37 +54,9 @@ public class Solution
 
         if (root.Value == key)
         {
-            //есть 2 дочерних элемента
-            if (root.Left != null &&
-                root.Right != null)
-            {
+            var newRoot = ChangeNode(root);
 
-                //будем брать самую правую вершину в левом поддереве
-                (Node parentNode, Node minNode) = FindMin(root.Left, root);
-
-                //меняем связи узлов в дереве
-                
-                //замена на месте переносимого элемента
-                if(parentNode.Left == minNode)
-                    parentNode.Left = minNode.Right;
-                else
-                {
-                    parentNode.Right = minNode.Right;
-                }
-
-                //замена на месте удаляемого
-                minNode.Left = root.Left;
-                minNode.Right = root.Right;
-
-                return minNode;
-            }
-            
-            //есть только левый
-            if (root.Left != null)
-                return root.Left;
-                
-            //только правый
-            return root.Right;
+            return newRoot;
         }
         
         //иначе...
@@ -101,6 +73,48 @@ public class Solution
         }
 
         return root;
+    }
+
+    private static Node ChangeNode(Node root)
+    {
+        //есть 2 дочерних элемента
+        if (root.Left != null &&
+            root.Right != null)
+        {
+
+            var minNode = ChangeRootToMin(root);
+
+            return minNode;
+        }
+
+        //есть только левый
+        if (root.Left != null)
+            return root.Left;
+
+        //только правый
+        return root.Right;
+    }
+
+    private static Node ChangeRootToMin(Node root)
+    {
+        //будем брать самую правую вершину в левом поддереве
+        (Node parentNode, Node minNode) = FindMin(root.Left, root);
+
+        //меняем связи узлов в дереве
+
+        //замена на месте переносимого элемента
+        if (parentNode.Left == minNode)
+            parentNode.Left = minNode.Right;
+        else
+        {
+            parentNode.Right = minNode.Right;
+        }
+
+        //замена на месте удаляемого
+        minNode.Left = root.Left;
+        minNode.Right = root.Right;
+
+        return minNode;
     }
 
     //на входе две ноды - сама нода, и родительская к ней
