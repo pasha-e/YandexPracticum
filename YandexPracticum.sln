@@ -119,11 +119,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "A.CreateListOfAdjacency", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "B.CreateMatrixOfAdjacency", "Sprint6\B.CreateMatrixOfAdjacency\B.CreateMatrixOfAdjacency.csproj", "{6CA7A6C6-05E7-497A-989F-9DEC38989AF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C.DFS", "Sprint6\C.DFS\C.DFS.csproj", "{F586A8D0-CC9E-467F-BA08-F1BFA408C5A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C.DFS", "Sprint6\C.DFS\C.DFS.csproj", "{F586A8D0-CC9E-467F-BA08-F1BFA408C5A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H.QuitTime", "Sprint6\H.QuitTime\H.QuitTime.csproj", "{BB99324F-F7A6-4306-B108-BDF8C6CD9086}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "H.QuitTime", "Sprint6\H.QuitTime\H.QuitTime.csproj", "{BB99324F-F7A6-4306-B108-BDF8C6CD9086}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J.TopologySort", "Sprint6\J.TopologySort\J.TopologySort.csproj", "{3925F2A3-C951-440D-B2AD-71786D9A12D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "J.TopologySort", "Sprint6\J.TopologySort\J.TopologySort.csproj", "{3925F2A3-C951-440D-B2AD-71786D9A12D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E.Connectivity", "Sprint6\E.Connectivity\E.Connectivity.csproj", "{6806E417-5250-4451-A9A6-744F9409BD9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -331,6 +333,10 @@ Global
 		{3925F2A3-C951-440D-B2AD-71786D9A12D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3925F2A3-C951-440D-B2AD-71786D9A12D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3925F2A3-C951-440D-B2AD-71786D9A12D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6806E417-5250-4451-A9A6-744F9409BD9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6806E417-5250-4451-A9A6-744F9409BD9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6806E417-5250-4451-A9A6-744F9409BD9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6806E417-5250-4451-A9A6-744F9409BD9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -391,6 +397,7 @@ Global
 		{F586A8D0-CC9E-467F-BA08-F1BFA408C5A3} = {87471F21-C909-48FF-84AF-77ABC83E2E8B}
 		{BB99324F-F7A6-4306-B108-BDF8C6CD9086} = {87471F21-C909-48FF-84AF-77ABC83E2E8B}
 		{3925F2A3-C951-440D-B2AD-71786D9A12D7} = {87471F21-C909-48FF-84AF-77ABC83E2E8B}
+		{6806E417-5250-4451-A9A6-744F9409BD9C} = {87471F21-C909-48FF-84AF-77ABC83E2E8B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2836D203-ED61-4435-BE14-A0F4EAC964D7}
