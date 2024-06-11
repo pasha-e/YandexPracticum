@@ -1241,3 +1241,37 @@ timofey<br>
 </details>
 
 ---
+
+## Sprint 6. Графы
+
+[contest.yandex.ru](https://contest.yandex.ru/contest/25069/problems/)
+
+---
+
+<details>
+  <summary> <b>Финальные задачи</b> <a href="https://contest.yandex.ru/contest/25070/problems/">contest.yandex.ru</a> </summary>
+
+---
+
+  <details>
+<summary>
+<b>Дорогая сеть ()</b>
+</summary>
+
+</details>
+
+---
+
+  <details>
+<summary>
+<b>Железные дороги ()</b>
+</summary>
+
+</details>
+
+
+---
+
+</details>
+
+---
