@@ -143,6 +143,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "A.Exchange", "Sprint7\A.Exc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B.Schedule", "Sprint7\B.Schedule\B.Schedule.csproj", "{EA7DA743-CA68-4B29-824A-DA35F79BB86F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C.Gold", "Sprint7\C.Gold\C.Gold.csproj", "{D20FBCC2-ECBA-4F90-B8A8-AE6498DB8AE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -377,6 +379,10 @@ Global
 		{EA7DA743-CA68-4B29-824A-DA35F79BB86F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA7DA743-CA68-4B29-824A-DA35F79BB86F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA7DA743-CA68-4B29-824A-DA35F79BB86F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D20FBCC2-ECBA-4F90-B8A8-AE6498DB8AE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20FBCC2-ECBA-4F90-B8A8-AE6498DB8AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20FBCC2-ECBA-4F90-B8A8-AE6498DB8AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20FBCC2-ECBA-4F90-B8A8-AE6498DB8AE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -445,6 +451,7 @@ Global
 		{B354260D-9E4A-490D-9F71-2879BDC07997} = {13941C40-AE9B-4B05-ACDF-64F18BFC4776}
 		{A1552CAF-B1F7-4060-B715-79A906CCCAF1} = {99FEBF9D-CDE4-4EDA-BD8A-2289747FD077}
 		{EA7DA743-CA68-4B29-824A-DA35F79BB86F} = {99FEBF9D-CDE4-4EDA-BD8A-2289747FD077}
+		{D20FBCC2-ECBA-4F90-B8A8-AE6498DB8AE6} = {99FEBF9D-CDE4-4EDA-BD8A-2289747FD077}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2836D203-ED61-4435-BE14-A0F4EAC964D7}
