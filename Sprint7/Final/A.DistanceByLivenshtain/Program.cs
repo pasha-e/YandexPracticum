@@ -1,6 +1,6 @@
 ﻿
 /*
-
+    https://contest.yandex.ru/contest/25597/run-report/115495270/
  */
 /*
      -- ПРИНЦИП РАБОТЫ --
@@ -35,7 +35,7 @@ public class DistByLivenstain
         string str1 = reader.ReadLine();
         string str2 = reader.ReadLine();
 
-        int dist = CalcDistByLivestain(str1, str2);
+        var dist = CalcDistByLivestain(str1, str2);
 
         writer.WriteLine(dist);
 
@@ -48,13 +48,19 @@ public class DistByLivenstain
         var n = str1.Length;
         var m = str2.Length;
 
+        //для экономии будет  памяти выгоднее работать по короткой строке 
         if (n > m)
         {
             (str1, str2) = (str2, str1);
             (n, m) = (m, n);
         }
 
+        //так как нам не надо знать конкретные замены на шагах, а только их количество,  
+        //то нет необходимости хратить всю матрицу, достаточно только 2 строчки
+
         int[] currentRow = new int[n + 1];
+
+        //базовый случай
         for(int i=0; i<currentRow.Length; i++)
             currentRow[i] = i;
 
@@ -65,7 +71,7 @@ public class DistByLivenstain
             for (int k = 0; k < prevRow.Length; k++)
                 prevRow[k] = 0;
 
-            prevRow[0] = i;
+            prevRow[0] = i; // базовый случай
 
             (prevRow, currentRow) = (currentRow, prevRow);
 

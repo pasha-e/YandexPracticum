@@ -161,6 +161,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Final", "Final", "{D1D0D2E6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A.DistanceByLivenshtain", "Sprint7\Final\A.DistanceByLivenshtain\A.DistanceByLivenshtain.csproj", "{6E72775D-C9BB-4608-B62A-C0DD815EEB5C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B.AmountsOfSubsets", "Sprint7\Final\B.AmountsOfSubsets\B.AmountsOfSubsets.csproj", "{2BB86D74-CF8D-41D4-8525-F8DDFE80A36E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -427,6 +429,10 @@ Global
 		{6E72775D-C9BB-4608-B62A-C0DD815EEB5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E72775D-C9BB-4608-B62A-C0DD815EEB5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E72775D-C9BB-4608-B62A-C0DD815EEB5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BB86D74-CF8D-41D4-8525-F8DDFE80A36E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BB86D74-CF8D-41D4-8525-F8DDFE80A36E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BB86D74-CF8D-41D4-8525-F8DDFE80A36E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BB86D74-CF8D-41D4-8525-F8DDFE80A36E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -504,6 +510,7 @@ Global
 		{92E5680E-DF6A-49AE-AF1E-C1864AE4B447} = {99FEBF9D-CDE4-4EDA-BD8A-2289747FD077}
 		{D1D0D2E6-1FF6-44CC-834B-D6896DB9138C} = {99FEBF9D-CDE4-4EDA-BD8A-2289747FD077}
 		{6E72775D-C9BB-4608-B62A-C0DD815EEB5C} = {D1D0D2E6-1FF6-44CC-834B-D6896DB9138C}
+		{2BB86D74-CF8D-41D4-8525-F8DDFE80A36E} = {D1D0D2E6-1FF6-44CC-834B-D6896DB9138C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2836D203-ED61-4435-BE14-A0F4EAC964D7}
