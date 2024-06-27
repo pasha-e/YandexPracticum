@@ -87,14 +87,10 @@ public class Subsets
             if (arr[i] > target) //есть элемент который больше половины суммы  - сразу выход
                 return false;
 
-            //PrintDebug(dp);
-
             //проверяем значения от target до элемента входного массива
             for (int j = target; j > arr[i]-1; j--)
             {
                 //True - если элемент есть во входящих значениях
-
-                //PrintDebug(dp);
 
                 dp[j] = dp[j - arr[i]] || dp[j];
 
@@ -104,14 +100,6 @@ public class Subsets
         }
 
         return dp[target];
-    }
-
-    private static void PrintDebug(bool[] dp)
-    {
-        foreach(bool b in dp)
-            writer.Write($"{b} ");
-
-        writer.WriteLine();
     }
 
     private static List<int> ReadList()

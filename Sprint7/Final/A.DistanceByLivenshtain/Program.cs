@@ -1,6 +1,6 @@
 ﻿
-/*
-    https://contest.yandex.ru/contest/25597/run-report/115495270/
+/*    
+    https://contest.yandex.ru/contest/25597/run-report/115563830/
  */
 /*
      -- ПРИНЦИП РАБОТЫ --
@@ -128,9 +128,7 @@ public class DistByLivenstain
 
     private static int Min(int a, int b, int c)
     {
-        int[] arr = new[] { a, b, c };
-
-        return arr.Min();
+        return Math.Min(Math.Min(a,b), c);
     }
 }
 
