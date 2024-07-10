@@ -1,5 +1,5 @@
 ﻿/*
-https://contest.yandex.ru/contest/26133/run-report/115998437/
+https://contest.yandex.ru/contest/26133/run-report/115998907/
  */
 
 /*
@@ -99,7 +99,7 @@ public class PacketFrefix
 
                     listStr.Reverse();
 
-                    var str = ListToString(listStr);
+                    var str = ListJoinToString(listStr);
 
                     var count = Convert.ToInt32(symbolStack.Pop());
 
@@ -120,18 +120,23 @@ public class PacketFrefix
 
 
         //разберём стек, не забыв перевернуть
+        return StackJoinToString(symbolStack);
+    }
+
+    private static string StackJoinToString(Stack<string> stack)
+    {
         List<string> strList = new();
-        while (symbolStack.TryPop(out var symb))
+        while (stack.TryPop(out var symb))
         {
             strList.Add(symb);
         }
 
         strList.Reverse();
-        
-        return ListToString(strList); ;
+
+        return ListJoinToString(strList);
     }
 
-    private static string ListToString(List<string> list)
+    private static string ListJoinToString(List<string> list)
     {
         StringBuilder sb = new ();
         foreach (var item in list)
