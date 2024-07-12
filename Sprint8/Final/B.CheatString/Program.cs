@@ -5,6 +5,10 @@ https://contest.yandex.ru/contest/26133/run-report/116020620/
 /*
    -- ПРИНЦИП РАБОТЫ --
 
+    https://habr.com/ru/companies/otus/articles/674378/
+    https://habr.com/ru/companies/otus/articles/676692/
+    https://ru.algorithmica.org/cs/string-structures/trie/
+
     1) Сперва построим Префиксное дерево по заданным паттернам. 
         В структуре узла будем хранить переходы ( список ребёр ) в виде хэш таблицы  
 
