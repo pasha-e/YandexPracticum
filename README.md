@@ -2087,8 +2087,6 @@ NO<br>
 
 ---
 
----
-
 <details>
   <summary> <b>Финальные задачи</b> <a href="https://contest.yandex.ru/contest/25597/problems/">contest.yandex.ru</a> </summary>
 
