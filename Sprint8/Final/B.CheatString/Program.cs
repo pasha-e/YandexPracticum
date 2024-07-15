@@ -1,5 +1,5 @@
 ﻿/*
-https://contest.yandex.ru/contest/26133/run-report/116020620/
+https://contest.yandex.ru/contest/26133/run-report/116123287/
  */
 
 /*
@@ -56,16 +56,12 @@ public class CheatString
 
         var longStr = reader.ReadLine();
 
-        var n = ReadInt();
+        //review
+        //будем считывать бор без промежуторчных структур данных
+        //(хотя на тесте оказалось, что это не дало прироста ни по времени, ни по памяти)
+        Node root = CreateTree();
 
-        List<string> wordsList = new();
-
-        for (int i = 0; i < n; i++)
-        {
-            wordsList.Add(reader.ReadLine());
-        }
-
-        var res = CheckStringToAllWords(longStr, wordsList);
+        var res = CheckStringToAllWords(longStr, root);
             
         writer.WriteLine(res? Positive : Negative );
 
@@ -73,10 +69,8 @@ public class CheatString
         writer.Close();
     }
 
-    private static bool CheckStringToAllWords(string? longStr, List<string> wordsList)
+    private static bool CheckStringToAllWords(string? longStr, Node root)
     {
-        Node root = CreateTree(wordsList);
-
         bool[] dp = new bool[longStr.Length +1];
 
         for(int i = 0; i < dp.Length; i++)
@@ -116,15 +110,18 @@ public class CheatString
     /// <summary>
     /// создать префиксное деверо
     /// </summary>
-    /// <param name="patternList"></param>
     /// <returns></returns>
-    private static Node CreateTree(List<string> patternList)
+    private static Node CreateTree()
     {
         Node root = new Node();
 
+        var n = ReadInt();
+
         //по всем словам словаря
-        foreach (var pattern in patternList)
+        for(var i = 0; i < n; i++)
         {
+            var pattern = reader.ReadLine();
+
             Node curNode = root;
 
             //посимвольно
